@@ -1,0 +1,163 @@
+19311 execve("./a.out", ["./a.out"], 0x7fff4d4f8788 /* 58 vars */) = 0
+19311 brk(NULL)                         = 0x55aaaf2fe000
+19311 arch_prctl(0x3001 /* ARCH_??? */, 0x7ffd83affde0) = -1 EINVAL (Invalid argument)
+19311 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+19311 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+19311 fstat(3, {st_mode=S_IFREG|0644, st_size=80048, ...}) = 0
+19311 mmap(NULL, 80048, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f5bfa092000
+19311 close(3)                          = 0
+19311 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+19311 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+19311 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+19311 pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+19311 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+19311 fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...}) = 0
+19311 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f5bfa090000
+19311 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+19311 pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+19311 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+19311 mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f5bf9e9e000
+19311 mprotect(0x7f5bf9ec3000, 1847296, PROT_NONE) = 0
+19311 mmap(0x7f5bf9ec3000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7f5bf9ec3000
+19311 mmap(0x7f5bfa03b000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7f5bfa03b000
+19311 mmap(0x7f5bfa086000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f5bfa086000
+19311 mmap(0x7f5bfa08c000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f5bfa08c000
+19311 close(3)                          = 0
+19311 arch_prctl(ARCH_SET_FS, 0x7f5bfa091540) = 0
+19311 mprotect(0x7f5bfa086000, 12288, PROT_READ) = 0
+19311 mprotect(0x55aaae67d000, 4096, PROT_READ) = 0
+19311 mprotect(0x7f5bfa0d3000, 4096, PROT_READ) = 0
+19311 munmap(0x7f5bfa092000, 80048)     = 0
+19311 pipe([3, 4])                      = 0
+19311 pipe([5, 6])                      = 0
+19311 getpid()                          = 19311
+19311 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f5bfa091810) = 19312
+19311 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+19312 prctl(PR_SET_PDEATHSIG, SIGTERM)  = 0
+19312 rt_sigaction(SIGTERM, {sa_handler=0x55aaae67b388, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f5bf9ee4210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+19312 getppid()                         = 19311
+19311 <... clone resumed>, child_tidptr=0x7f5bfa091810) = 19313
+19312 close(4)                          = 0
+19312 read(3,  <unfinished ...>
+19311 close(3 <unfinished ...>
+19313 prctl(PR_SET_PDEATHSIG, SIGTERM <unfinished ...>
+19311 <... close resumed>)              = 0
+19311 close(5 <unfinished ...>
+19313 <... prctl resumed>)              = 0
+19313 rt_sigaction(SIGTERM, {sa_handler=0x55aaae67b388, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f5bf9ee4210},  <unfinished ...>
+19311 <... close resumed>)              = 0
+19311 read(0,  <unfinished ...>
+19313 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+19313 getppid()                         = 19311
+19313 close(6)                          = 0
+19313 read(5,  <unfinished ...>
+19311 <... read resumed>"c", 1)         = 1
+19311 read(0, "h", 1)                   = 1
+19311 read(0, "i", 1)                   = 1
+19311 read(0, "l", 1)                   = 1
+19311 read(0, "d", 1)                   = 1
+19311 read(0, "1", 1)                   = 1
+19311 read(0, "\n", 1)                  = 1
+19311 write(4, "child1\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4097) = 4097
+19312 <... read resumed>"child1\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4097) = 4097
+19311 read(0,  <unfinished ...>
+19312 openat(AT_FDCWD, "child1", O_WRONLY|O_CREAT, 0600) = 4
+19312 read(3,  <unfinished ...>
+19311 <... read resumed>"c", 1)         = 1
+19311 read(0, "h", 1)                   = 1
+19311 read(0, "i", 1)                   = 1
+19311 read(0, "l", 1)                   = 1
+19311 read(0, "d", 1)                   = 1
+19311 read(0, "2", 1)                   = 1
+19311 read(0, "\n", 1)                  = 1
+19311 write(6, "child2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4097) = 4097
+19311 read(0,  <unfinished ...>
+19313 <... read resumed>"child2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4097) = 4097
+19313 openat(AT_FDCWD, "child2", O_WRONLY|O_CREAT, 0600) = 6
+19313 read(5,  <unfinished ...>
+19311 <... read resumed>"q", 1)         = 1
+19311 read(0, "w", 1)                   = 1
+19311 read(0, "e", 1)                   = 1
+19311 read(0, "\n", 1)                  = 1
+19311 write(4, "qwe\0\4\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19312 <... read resumed>"qwe\0\4\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19312 write(4, "ewq", 3)                = 3
+19312 write(4, "\n", 1 <unfinished ...>
+19311 read(0,  <unfinished ...>
+19312 <... write resumed>)              = 1
+19312 read(3,  <unfinished ...>
+19311 <... read resumed>"r", 1)         = 1
+19311 read(0, "t", 1)                   = 1
+19311 read(0, "y", 1)                   = 1
+19311 read(0, "\n", 1)                  = 1
+19311 write(4, "rty\0\4\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19311 read(0,  <unfinished ...>
+19312 <... read resumed>"rty\0\4\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19312 write(4, "ytr", 3)                = 3
+19312 write(4, "\n", 1)                 = 1
+19312 read(3,  <unfinished ...>
+19311 <... read resumed>"1", 1)         = 1
+19311 read(0, "2", 1)                   = 1
+19311 read(0, "3", 1)                   = 1
+19311 read(0, "4", 1)                   = 1
+19311 read(0, "5", 1)                   = 1
+19311 read(0, "6", 1)                   = 1
+19311 read(0, "7", 1)                   = 1
+19311 read(0, "8", 1)                   = 1
+19311 read(0, "9", 1)                   = 1
+19311 read(0, "1", 1)                   = 1
+19311 read(0, "2", 1)                   = 1
+19311 read(0, "3", 1)                   = 1
+19311 read(0, "\n", 1)                  = 1
+19311 write(6, "123456789123\0\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19313 <... read resumed>"123456789123\0\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19311 read(0,  <unfinished ...>
+19313 write(6, "321987654321", 12)      = 12
+19313 write(6, "\n", 1)                 = 1
+19313 read(5,  <unfinished ...>
+19311 <... read resumed>"a", 1)         = 1
+19311 read(0, "s", 1)                   = 1
+19311 read(0, "d", 1)                   = 1
+19311 read(0, "f", 1)                   = 1
+19311 read(0, "a", 1)                   = 1
+19311 read(0, "\n", 1)                  = 1
+19311 write(4, "asdfa\000789123\0\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19312 <... read resumed>"asdfa\000789123\0\0\0\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19311 read(0,  <unfinished ...>
+19312 write(4, "afdsa", 5)              = 5
+19312 write(4, "\n", 1)                 = 1
+19312 read(3,  <unfinished ...>
+19311 <... read resumed>"r", 1)         = 1
+19311 read(0, "t", 1)                   = 1
+19311 read(0, "r", 1)                   = 1
+19311 read(0, "e", 1)                   = 1
+19311 read(0, "f", 1)                   = 1
+19311 read(0, "d", 1)                   = 1
+19311 read(0, "g", 1)                   = 1
+19311 read(0, "d", 1)                   = 1
+19311 read(0, "f", 1)                   = 1
+19311 read(0, "g", 1)                   = 1
+19311 read(0, "d", 1)                   = 1
+19311 read(0, "f", 1)                   = 1
+19311 read(0, "g", 1)                   = 1
+19311 read(0, "e", 1)                   = 1
+19311 read(0, "r", 1)                   = 1
+19311 read(0, "\n", 1)                  = 1
+19311 write(6, "rtrefdgdfgdfger\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19311 read(0,  <unfinished ...>
+19313 <... read resumed>"rtrefdgdfgdfger\0\0\320\31\0\0\0\0\0\0\320\31\0\0\0\0\0"..., 4097) = 4097
+19313 write(6, "regfdgfdgdfertr", 15)   = 15
+19313 write(6, "\n", 1)                 = 1
+19313 read(5,  <unfinished ...>
+19311 <... read resumed>"", 1)          = 0
+19311 exit_group(0)                     = ?
+19311 +++ exited with 0 +++
+19313 <... read resumed>0x7ffd83afed60, 4097) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+19312 <... read resumed>0x7ffd83afed60, 4097) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+19313 --- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=19311, si_uid=1000} ---
+19312 --- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=19311, si_uid=1000} ---
+19313 exit_group(0)                     = ?
+19312 exit_group(0 <unfinished ...>
+19313 +++ exited with 0 +++
+19312 <... exit_group resumed>)         = ?
+19312 +++ exited with 0 +++
